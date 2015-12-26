@@ -1,10 +1,11 @@
 {
   "name": "php-meesa",
   "version": "0.0.1",
-  "description": "php api and js front-end example app",
+  "description": "php api back-end and reactJS front-end example app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "watchify -v -d -t [ babelify --presets [ es2015 react ] ] -o client/public/js/bundle.js client/js/main.js",
+    "start": "php -S 0.0.0.0:8080 router.php"
   },
   "repository": {
     "type": "git",
