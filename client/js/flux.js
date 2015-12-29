@@ -10,6 +10,9 @@ import ListStore from './message-list/store';
 import PostActions from './post/actions';
 import PostStore from './post/store';
 
+import LoginActions from './login/actions';
+import LoginStore from './login/store';
+
 export default class Flux extends Flummox {
     constructor() {
         super();
@@ -19,5 +22,8 @@ export default class Flux extends Flummox {
 
         this.createActions('messages', ListActions);
         this.createStore('messages', ListStore, this);
+
+        this.createActions('login', LoginActions);
+        this.createStore('login', LoginStore, this);
     }
 }

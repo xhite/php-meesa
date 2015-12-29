@@ -10,7 +10,7 @@ export default class Message extends Component {
         return (
             <div className="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp" style={style}>
                 <div className="mdl-card__title">
-                    <h2 className="mdl-card__title-text">{this.props.children}</h2>
+                    <h2 className="mdl-card__title-text mdl-button--primary">{this.props.children}</h2>
                 </div>
                 <div className="mdl-card__menu">
                     <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">

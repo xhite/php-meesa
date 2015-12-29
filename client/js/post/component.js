@@ -8,7 +8,6 @@ export default class Post extends Component {
     render() {
         const actions = this.props.flux.getActions('post');
         return (
-            <div className="mdl-grid">
                 <div className="mdl-cell mdl-cell--12-col mdl-shadow--2dp mdl-card__supporting-text">
                     <form onSubmit={actions.onSubmit}>
                         <div className="mdl-textfield mdl-js-textfield">
@@ -20,7 +19,6 @@ export default class Post extends Component {
                         </button>
                     </form>
                 </div>
-            </div>
         );
     }
 }

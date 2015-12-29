@@ -18,7 +18,7 @@ export default class MessageList extends Component {
     render() {
         return (
             <FluxComponent connectToStores={['messages']}>
-                <div className="mdl-grid">
+                <div>
                     {
                         this.props.messages.map((m) => { return (<Message key={m.id} onDelete={(e)=>{this.actions.deleteMessage(m.id)}}>{m.content}</Message>);})
                     }
