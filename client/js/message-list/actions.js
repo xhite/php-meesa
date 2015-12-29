@@ -13,4 +13,8 @@ export default class MessageActions extends Actions {
         console.log("delete message");
         return id;
     }
+    fetchMessages() {
+        console.log("fetch messages");
+        return '/api/messages';
+    }
 }

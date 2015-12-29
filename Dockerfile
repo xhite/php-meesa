@@ -2,7 +2,7 @@ FROM php:5.6-cli
 
 ENV APP_USER=app APP_PATH=/var/app
 
-RUN useradd -Ms /bin/bash $APP_USER && mkdir -p $APP_PATH
+RUN useradd -Ms /bin/bash $APP_USER && mkdir -p $APP_PATH && docker-php-ext-install mysqli
 
 WORKDIR $APP_PATH
 

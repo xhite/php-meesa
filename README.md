@@ -6,3 +6,7 @@ php api and js front-end example app
 
 docker build -t php-meesa .
 docker run -it -p <host port>:8080 -v <host absolute path to repo>:/var/app/ php-meesa
+
+##via PHP CLI:
+
+php -S 0.0.0.0:<port> router.php

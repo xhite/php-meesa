@@ -6,8 +6,9 @@ import React, { Component } from 'react';
 
 export default class Message extends Component {
     render() {
+        const style = {'minHeight':'50px'};
         return (
-            <div className="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+            <div className="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp" style={style}>
                 <div className="mdl-card__title">
                     <h2 className="mdl-card__title-text">{this.props.children}</h2>
                 </div>

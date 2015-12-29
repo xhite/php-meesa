@@ -8,13 +8,19 @@ import FluxComponent from 'flummox/component';
 import Message from '../message/component';
 
 export default class MessageList extends Component {
+    constructor(props){
+        super(props);
+        this.actions = this.props.flux.getActions('messages');
+    }
+    componentDidMount() {
+        this.actions.fetchMessages();
+    }
     render() {
-        const actions = this.props.flux.getActions('messages');
         return (
             <FluxComponent connectToStores={['messages']}>
                 <div className="mdl-grid">
                     {
-                        this.props.messages.map(function(m) { return (<Message key={m.id} onDelete={(e)=>actions.deleteMessage(m.id)}>{m.content}</Message>);})
+                        this.props.messages.map((m) => { return (<Message key={m.id} onDelete={(e)=>{this.actions.deleteMessage(m.id)}}>{m.content}</Message>);})
                     }
                 </div>
             </FluxComponent>

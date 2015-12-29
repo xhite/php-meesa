@@ -1,6 +1,6 @@
-DROP TABLE IF_EXISTS `meesa`.`User`;
+DROP DATABASE IF EXISTS `meesa`;
 
-DROP TABLE IF_EXISTS `meesa`.`Message`;
+CREATE DATABASE IF NOT EXISTS `meesa`;
 
 CREATE TABLE `meesa`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -10,12 +10,12 @@ CREATE TABLE `meesa`.`User` (
 
 CREATE TABLE `meesa`.`Message` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `content` INT NOT NULL,
+  `content` VARCHAR(200) NOT NULL,
   `dateCreation` DATE NOT NULL,
   PRIMARY KEY (`id`));
 
-insert into meesa.User(name, password)
-values('admin', 'toto',);
+INSERT into meesa.User(name, password)
+values('admin', 'toto');
 
-insert into meesa.Message(content, dateCreation)
+INSERT into meesa.Message(content, dateCreation)
 values('hi', CURDATE());
